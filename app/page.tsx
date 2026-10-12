@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CustomerLogos } from "@/components/CustomerLogos";
 import { ProductVisual } from "@/components/ProductVisual";
 import {
   categories,
+  customers,
   industries,
   partners,
   pillars,
@@ -24,76 +26,44 @@ export default function HomePage() {
       <section className="relative flex min-h-[calc(100svh-5.75rem)] flex-col overflow-hidden bg-ink text-paper">
         <Image
           src={scenes.hero}
-          alt="Linde forklift in a warehouse"
+          alt="Linde electric forklift range from Halcyon MH"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[70%_center]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/35" />
-        <div className="pointer-events-none absolute inset-0 grid-overlay opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/15" />
+        <div className="pointer-events-none absolute inset-0 grid-overlay opacity-30" />
         <div className="absolute left-0 top-0 h-full w-2 safety-stripe" />
 
         <div className="relative flex flex-1 flex-col justify-center px-5 py-12 lg:px-10">
-          <div className="grid items-end gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-8">
-              <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-brand">
-                Tema · Est. {site.established} · Sole Linde dealer
-              </p>
-              <h1 className="mt-5 max-w-4xl font-display text-[3.4rem] uppercase leading-[0.88] sm:text-7xl lg:text-[7.2rem]">
-                Keep Ghana
-                <span className="block text-brand">moving.</span>
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/75">
-                Official Linde Material Handling dealer. Forklifts, warehouse
-                trucks, Magni telehandlers, next-day OEM parts and
-                factory-trained service — from our Tema showroom to every site
-                in the country.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/quote"
-                  className="bg-brand px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-white hover:bg-brand-dark"
-                >
-                  Request a quote
-                </Link>
-                <Link
-                  href="/products"
-                  className="border border-white/25 px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.16em] hover:border-paper"
-                >
-                  Browse equipment
-                </Link>
-              </div>
-            </div>
-
-            <aside className="border border-white/15 bg-ink/70 p-6 backdrop-blur lg:col-span-4">
-              <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-brand">
-                In the yard now
-              </p>
-              <p className="mt-3 font-display text-5xl uppercase leading-none">H20–H35</p>
-              <p className="mt-2 text-sm text-paper/60">IC truck · 2.0–3.5 t · hydrostatic drive</p>
-              <dl className="mt-6 grid grid-cols-2 gap-4 border-t border-white/10 pt-5 font-mono text-[11px] uppercase tracking-[0.14em] text-paper/55">
-                <div>
-                  <dt>Capacity</dt>
-                  <dd className="mt-1 text-paper">2.0 – 3.5 t</dd>
-                </div>
-                <div>
-                  <dt>Drive</dt>
-                  <dd className="mt-1 text-paper">Hydrostatic</dd>
-                </div>
-                <div>
-                  <dt>Duty</dt>
-                  <dd className="mt-1 text-paper">Multi-shift outdoor</dd>
-                </div>
-                <div>
-                  <dt>Fuel</dt>
-                  <dd className="mt-1 text-paper">Diesel / LPG</dd>
-                </div>
-              </dl>
-              <Link href="/products/h20-h35" className="mt-6 block text-[12px] uppercase tracking-[0.18em] text-brand">
-                View specifications →
+          <div className="max-w-3xl">
+            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-brand">
+              Official Linde dealer · Tema, Ghana
+            </p>
+            <h1 className="mt-5 font-display text-[3.2rem] uppercase leading-[0.9] sm:text-7xl lg:text-8xl">
+              Halcyon
+              <span className="block text-brand">MH LTD</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/80">
+              To provide Linde forklifts to as many companies in Ghana through a
+              trusted nationwide network of partners; to make material handling a
+              gratifying experience.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/quote"
+                className="bg-brand px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-white hover:bg-brand-dark"
+              >
+                Request a quote
               </Link>
-            </aside>
+              <Link
+                href="/products"
+                className="border border-white/25 px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.16em] hover:border-paper"
+              >
+                Browse equipment
+              </Link>
+            </div>
           </div>
 
           <div className="mt-12 grid grid-cols-2 gap-px border border-white/10 bg-white/10 md:grid-cols-4">
@@ -123,6 +93,28 @@ export default function HomePage() {
               <p className="mt-2 text-sm text-ink/60">{partner.note}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="border-b border-ink/10 bg-white px-5 py-14 lg:px-10">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-brand">
+              Key customers
+            </p>
+            <h2 className="mt-3 font-display text-4xl uppercase leading-none sm:text-5xl">
+              {customers.length} operators. One dealer.
+            </h2>
+          </div>
+          <Link
+            href="/about#key-customers"
+            className="text-[12px] font-semibold uppercase tracking-[0.16em]"
+          >
+            See who we work with →
+          </Link>
+        </div>
+        <div className="mt-8 border border-ink/10">
+          <CustomerLogos dense />
         </div>
       </section>
 
@@ -177,6 +169,12 @@ export default function HomePage() {
         <h2 className="mt-3 max-w-3xl font-display text-5xl uppercase leading-none">
           Productivity. Safety. Ergonomics.
         </h2>
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-paper/65">
+          With over 50 years of expertise, Linde Material Handling is one of the
+          world’s largest manufacturers of forklift trucks and warehouse equipment.
+          They have been at the forefront of defining standards for industrial trucks,
+          fleet management, driver assistance systems and service offerings.
+        </p>
         <div className="mt-12 grid gap-10 lg:grid-cols-3">
           {pillars.map((pillar) => (
             <article key={pillar.title} className="border-t border-white/15 pt-6">

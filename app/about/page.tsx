@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CustomerLogos } from "@/components/CustomerLogos";
 import { PageHero } from "@/components/PageHero";
 import { partners, pillars, team } from "@/lib/content";
 
@@ -60,6 +61,27 @@ export default function AboutPage() {
               <p className="mt-3 text-sm text-ink/65">{partner.note}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="key-customers" className="bg-white px-5 py-16 lg:px-10">
+        <div className="grid items-end gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-brand">
+              Key customers
+            </p>
+            <h2 className="mt-3 font-display text-4xl uppercase leading-none sm:text-5xl">
+              Trusted on Ghana’s busiest floors
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-relaxed text-ink/65 lg:col-span-5">
+            Cocoa houses, beverage plants, ports, energy sites and factories already run
+            Linde and Magni equipment through Halcyon. The same names you will find on
+            Ghana’s busiest loading bays.
+          </p>
+        </div>
+        <div className="mt-10 border border-ink/10">
+          <CustomerLogos named />
         </div>
       </section>
 

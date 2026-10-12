@@ -34,7 +34,7 @@ export const partners = [
   {
     name: "Linde Material Handling",
     role: "Sole dealer, Ghana",
-    note: "Forklifts, warehouse trucks and automated systems",
+    note: "Forklift trucks, warehouse equipment and automated systems — 50+ years defining the standard",
   },
   {
     name: "Magni Telehandlers",
@@ -52,17 +52,17 @@ export const pillars = [
   {
     index: "01",
     title: "Productivity",
-    body: "Efficient trucks, intelligent software and complete service packages that keep intra-company logistics moving — and give operators a lasting competitive edge.",
+    body: "Efficient forklift trucks form the foundation of streamlined intra-company logistics. When combined with intelligent software and comprehensive service packages, operators can achieve lasting competitive benefits.",
   },
   {
     index: "02",
     title: "Safety",
-    body: "Halcyon’s Zero Accident Philosophy covers people, operators, trucks and goods. Integrated Linde solutions make Ghanaian warehouses and yards safer.",
+    body: "Halcyon Material Handling’s Zero Accident Philosophy revolves around the safety of individuals, operators, trucks and goods. By implementing integrated solutions, Linde is striving to achieve a future where intralogistics is safer.",
   },
   {
     index: "03",
     title: "Ergonomics",
-    body: "The best results come when people and machines work together. Ergonomic design is built into every Linde truck and every Halcyon service we deliver.",
+    body: "We strongly believe that optimal solutions arise when humans and technology collaborate seamlessly. Therefore, the principle of ergonomic design plays a crucial role in the company’s development of trucks and services.",
   },
 ];
 
@@ -124,7 +124,7 @@ export type Product = {
 };
 
 export const scenes = {
-  hero: "/images/hero-warehouse.png",
+  hero: "/images/hero-linde-lineup.jpg",
   workshop: "/images/scene-workshop.png",
   parts: "/images/scene-parts.png",
   port: "/images/scene-port.png",
@@ -598,6 +598,30 @@ export const testimonials = [
     name: "Ivan",
     role: "Maintenance",
   },
+];
+
+export const customers = [
+  { name: "Mohinani Group", sector: "Manufacturing", logo: "/images/customers/mohinani.jpg" },
+  { name: "Coca-Cola", sector: "Beverages", logo: "/images/customers/coca-cola.jpg" },
+  { name: "CIMAF", sector: "Cement", logo: "/images/customers/cimaf.jpg" },
+  { name: "Cadbury", sector: "FMCG", logo: "/images/customers/cadbury.jpg" },
+  { name: "Touton", sector: "Cocoa", logo: "/images/customers/touton.jpg" },
+  { name: "Olam", sector: "Agribusiness", logo: "/images/customers/olam.jpg" },
+  { name: "Imperial Logistics", sector: "Logistics", logo: "/images/customers/imperial-logistics.jpg" },
+  { name: "Blow Group", sector: "Industry", logo: "/images/customers/blow-group.jpg" },
+  { name: "Interplast", sector: "Manufacturing", logo: "/images/customers/interplast.png" },
+  { name: "Labianca Company Ltd", sector: "Trading", logo: "/images/customers/la-bianca.jpg" },
+  { name: "Nestlé", sector: "FMCG", logo: "/images/customers/nestle.jpg" },
+  { name: "Overseas Commerce Ghana", sector: "Trading", logo: "/images/customers/overseas.png" },
+  { name: "Schlumberger", sector: "Energy", logo: "/images/customers/schlumberger.jpg" },
+  { name: "Pioneer Foods", sector: "FMCG", logo: "/images/customers/pfc.png" },
+  { name: "Vivo Energy Ghana", sector: "Energy", logo: "/images/customers/vivo.png" },
+  { name: "Wilmar", sector: "Agribusiness", logo: "/images/customers/wilmar.jpg" },
+  { name: "Unilever", sector: "FMCG", logo: "/images/customers/unilever.jpg" },
+  { name: "Cosmo Seafoods", sector: "Seafood", logo: "/images/customers/cosmo.jpg" },
+  { name: "Kasapreko", sector: "Beverages", logo: "/images/customers/kasapreko.png" },
+  { name: "GB Foods Ghana", sector: "FMCG", logo: "/images/customers/gb-foods.jpg" },
+  { name: "Accra Brewery PLC", sector: "Beverages", logo: "/images/customers/abl.jpg" },
 ];
 
 export const team = [
