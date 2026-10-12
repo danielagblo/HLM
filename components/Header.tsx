@@ -23,8 +23,13 @@ export function Header() {
       </div>
 
       <div className="flex items-center justify-between px-5 py-4 lg:px-10">
-        <Link href="/" onClick={() => setOpen(false)} aria-label="Halcyon MH home">
-          <Logo inverted />
+        <Link
+          href="/"
+          onClick={() => setOpen(false)}
+          aria-label="Halcyon MH home"
+          className="transition-opacity hover:opacity-90"
+        >
+          <Logo inverted size="md" />
         </Link>
 
         <nav className="hidden items-center gap-5 xl:gap-7 lg:flex">
