@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: #e10600;
+  --color-brand-dark: #b10500;
+  --color-ink: #090b0e;
+  --color-steel: #12161c;
+  --color-panel: #1a2029;
+  --color-paper: #f4f0e8;
+  --color-sand: #e7e1d4;
+  --color-muted: #8b929c;
+  --color-line: #2a313c;
+  --font-sans: var(--font-body);
+  --font-display: var(--font-barlow);
+  --font-mono: var(--font-ibm);
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-barlow), "Arial Narrow", sans-serif;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--color-brand);
+  color: white;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.safety-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    #e10600,
+    #e10600 10px,
+    #090b0e 10px,
+    #090b0e 20px
+  );
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(to right, rgba(9, 11, 14, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(9, 11, 14, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
